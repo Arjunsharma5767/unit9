@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taj Mahal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="besttime.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <meta name="description"
+        content="Explore incredible travel experiences with UNIT 9 TRAVEL. From exotic international destinations to breathtaking Indian locales, we offer the best deals and packages for all types of travelers.">
+    <meta name="keywords"
+        content="Travel, UNIT 9 TRAVEL, India travel, international packages, budget travel, luxury travel">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .home {
+            text-decoration: none;
+            list-style-type: none;
+            color: black;
+            font-size: large;
+            font-style: bold;
+        }
+
+        .btn-primary {
+            background-color: orange;
+            border-radius: 20px;
+            border-color: darkorange;
+        }
+
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        .btnbtn-warning {
+
+            background-color: black;
+        }
+
+
+
+        body {
+            /* Ensure the body isn't clipping the content */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+            height: 100vh;
+            /* Full width of the viewport */
+            overflow-x: hidden;
+
+        }
+
+        header {
+            background: transparent;
+            padding: 10px 20px;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+
+        }
+
+        
+        /* Navbar styling */
+        .navbar-light {
+            background: transparent;
+            position: fixed;
+            width: 100%;
+            margin-left: -19px;
+        }
+
+        .navbar-logo img {
+
+            height: 30px;
+            margin-right: 90%;
+            width: 200px;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: #333;
+            font-weight: 500;
+            text-transform: uppercase;
+            padding: 0 10px;
+
+        }
+
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: #ff9800;
+            background-color: transparent;
+        }
+
+        .navbar-toggler {
+            border: none;
+            background: transparent;
+        }
+
+
+
+        /*packages*/
+        .grid-packages {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            /* Three equal columns */
+            gap: 20px;
+            /* Space between grid items */
+            width: 100%;
+            /* Expand to fill available width */
+        }
+
+        .packageul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .grid-packages ul a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .grid-packages ul a:hover {
+            color: orange;
+        }
+
+        .grid-packages h6 {
+            color: orange;
+        }
+
+        #ul-packages-1 li,
+        #ul-packages-2 li,
+        #ul-packages-3 li,
+        #ul-packages-4 li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        #ul-packages-1 li::before,
+        #ul-packages-2 li::before,
+        #ul-packages-3 li::before,
+        #ul-packages-4 li::before {
+            content: url('INDEX IMAGES/ico.png');
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 10px;
+            display: block;
+        }
+
+        /* international grid*/
+        .dropdown-menu {
+            width: fit-content;
+            height: fit-content;
+        }
+
+
+        .dropdown-menu .grid-dropdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            grid-template-columns: 33.3% 33.3% 33.3%;
+            grid-template-rows: 30% 30% 30%;
+            width: 320px;
+            top: 90px;
+            left: -10rem;
+            padding: 3px;
+
+        }
+
+        .dropdown-menu .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            grid-template-columns: 33.3% 33.3% 33.3%;
+            grid-template-rows: 30% 30% 30%;
+            width: 320px;
+            top: 90px;
+            left: -10rem;
+            padding: 3px;
+
+        }
+
+        .dropdown-menu .grid-item img {
+            width: 100%;
+            height: fit-content;
+            object-fit: cover;
+        }
+
+        .dropdown-menu .subdropdown-button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .dropdown-menu .subdropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: fit-content;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-menu .subdropdown:hover .subdropdown-content {
+            display: block;
+        }
+
+
+        /* time to visit grid */
+        .time .timeul li a {
+            list-style-type: none;
+            color: black;
+            text-decoration: none;
+        }
+
+        .time-to-visit {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .timeul li a {
+            list-style-type: none;
+            text-decoration: none;
+
+        }
+
+        .timeul li a :hover {
+            background-color: darkorange;
+
+        }
+
+
+
+
+        /* destinations grid */
+
+        /* Ordered List for Grid Headings */
+        .grid-packages {
+            width: fit-content;
+        }
+
+        .grid-heading-packages {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* Ensure grid layout */
+            grid-gap: 200px;
+        }
+
+        /* Individual Grid Items */
+        .grid-heading-packages li {
+            width: fit-content;
+            background-color: rgba(255, 255, 255, 0.244);
+
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Headings */
+        .grid-heading-packages li h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #333;
+
+        }
+
+        /* Unordered List for Package Details */
+        .package-details-packages {
+            list-style-type: none;
+            /* Remove bullets for inner list */
+            padding-left: 0;
+            text-align: left;
+            width: auto;
+            height: auto;
+
+        }
+
+        .package-details-packages li {
+            margin-bottom: 5px;
+            font-size: 10px;
+            color: #555;
+        }
+
+        /* Anchor Tag Styling */
+        .package-details-packages li a {
+            text-decoration: none;
+            color: #007bff;
+            /* Link color */
+        }
+
+        .package-details-packages li a:hover {
+            text-decoration: underline;
+            /* Underline on hover */
+        }
+
+        /* Hover effect for grid item */
+        .grid-heading-packages li:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Show dropdown on hover */
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .grid-dropdown-packages ol ul li a {
+            text-decoration: none;
+            list-style-type: none;
+            color: #000000;
+            font-size: 15px;
+        }
+
+
+        /* Dropdown menu */
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            width: fit-content;
+        }
+
+        .dropdown-item:hover {
+
+            background-color: #000000;
+            color: #ff9800;
+        }
+
+        .dropdown-menu h6 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #ff9800;
+            padding: 10px 20px;
+        }
+
+        .dropdown-menu hr {
+            margin: 5px 0;
+            border: 0;
+            border-top: 1px solid #ff9800;
+        }
+
+        .btn-warning {
+            background-color: #ff9800;
+            border: none;
+            padding: 8px 20px;
+            font-size: 0.7rem;
+            text-size-adjust: 1rem;
+
+        }
+
+        .btn-warning a {
+            color: white;
+            text-decoration: none;
+
+        }
+
+        .btn-warning a:hover {
+            color: #000000;
+            text-decoration: none;
+        }
+
+
+        /* Ensure that the dropdown menu is hidden by default */
+        .months {
+            display: none;
+            position: absolute;
+            background: white;
+            border: 1px solid #ddd;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            z-index: 1000;
+        }
+
+        /* Show the dropdown menu on hover */
+        ul:hover .months {
+            display: block;
+        }
+
+        /* Style the individual items */
+        .months li {
+            padding: 10px;
+        }
+
+        .months li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .months li a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .enquiry-link {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+            padding: 8px 16px;
+        }
+
+        /* Remove caret arrows from dropdowns */
+        .no-arrow .dropdown-toggle::after {
+            display: none !important;
+        }
+
+
+
+
+        /* destination */
+        .grid-dropdown {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* 3 columns */
+            grid-template-rows: repeat(3, auto);
+            /* 3 rows */
+
+        }
+
+        .grid-dropdown :hover {
+            background-color: orange;
+            color: orange;
+
+        }
+
+        .grid-dropdown a {
+            list-style-type: none;
+            text-decoration: none;
+            color: #000000;
+            padding: 3px;
+        }
+
+        .grid-item {
+            padding: 10px;
+
+
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .grid-item img {
+            width: 100px;
+            /* Remove the extra space between '70' and 'px' */
+            height: 0px;
+        }
+
+
+
+        /* subdropdown */
+
+        .dropdown-container {
+            display: flex;
+            flex-direction: column;
+            width: 150px;
+            margin: 20px auto;
+        }
+
+        .subdropdown {
+            position: relative;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .subdropdown-button {
+            background-color: darkorange;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .subdropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .subdropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+
+        }
+
+        .subdropdown-content a:hover {
+            background-color: #ff9800;
+            /* Highlight with orange color */
+            color: white;
+            /* Change text color for better contrast */
+        }
+
+        .subdropdown:hover .subdropdown-content {
+            display: block;
+        }
+
+        .subdropdown:hover .subdropdown-button {
+            background-color: #ffffff;
+        }
+
+        .custom-dropdown-menu {
+
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+
+
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .dropdown-menu {
+                width: 100%;
+                /* Full width on small screens */
+                padding: 10px;
+            }
+
+            .subdropdown-button {
+                font-size: 14px;
+                padding: 10px;
+                width: 100%;
+            }
+
+            .subdropdown-content {
+                width: 100%;
+                /* Full width for subdropdown content */
+            }
+
+            h5 {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .subdropdown-button {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            h5 {
+                font-size: 16px;
+            }
+        }
+
+
+
+        .fade-text {
+            opacity: 0;
+            animation: fadeIn 5s forwards;
+            /* Automatically fades in over 3 seconds */
+
+            color: #ddd;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive design */
+        @media only screen and (max-width: 768px) {
+            .responsive-bg {
+                background-size: cover;
+                background-position: center;
+                height: 50vh;
+                /* Adjust the height for smaller screens */
+                width: 100vw;
+            }
+
+            .imgcontainer {
+                width: 300px;
+                /* Smaller container size for smaller screens */
+                height: 300px;
+            }
+
+            .fade-text h1 {
+                font-size: 24px;
+                /* Adjust font size for smaller screens */
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .responsive-bg {
+                background-size: cover;
+                background-position: center;
+                height: 40vh;
+                /* Further adjust the height for very small screens */
+                width: 100vw;
+            }
+
+            .imgcontainer {
+                width: 200px;
+                /* Smaller container size for very small screens */
+                height: 200px;
+            }
+
+            .fade-text h1 {
+                font-size: 18px;
+                /* Smaller font size for very small screens */
+            }
+        }
+
+        .readmore-container {
+            position: relative;
+            background-color: white;
+            width: 100%;
+            max-width: 90vw;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .readmore-content {
+            line-height: 1.6;
+            max-height: 1.6em;
+            /* Show only one line of text */
+            overflow: hidden;
+            position: relative;
+            transition: max-height 0.5s ease;
+        }
+
+        .readmore-fade-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            height: 20px;
+            /* Match the height of one line */
+            background: linear-gradient(transparent, white);
+        }
+
+        .readmore-btn {
+            background-color: darkorange;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        /*navigation*/
+        .navigationul {
+            display: flex;
+            gap: 15px;
+
+            list-style-type: none;
+            color: rgb(255, 255, 255);
+            background-color: #f3f3f3;
+        }
+
+        .navigationul :hover {
+            color: orange;
+        }
+
+        .navigationul a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+
+
+
+
+        /*upper footer styling*/
+        .ul a:hover {
+            text-decoration: none;
+            color: #ffa703;
+        }
+
+        .h {
+            width: 100%;
+            border-width: 0.4rem;
+        }
+
+        .ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        .ul ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            /* Allows items to wrap to the next line on small screens */
+            justify-content: center;
+            /* Center items horizontally */
+        }
+
+        .ul li {
+            margin: 10px;
+            /* Add margin for spacing */
+            list-style-type: none;
+
+        }
+
+        .ul li a {
+            margin: 10px;
+            /* Add margin for spacing */
+            list-style-type: none;
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+
+        }
+
+        @media (max-width: 768px) {
+            .ul ul {
+                flex-direction: column;
+                /* Stack items vertically */
+                align-items: center;
+                /* Center items horizontally */
+            }
+
+            .ul li {
+                width: 100%;
+                /* Full width for each item */
+                text-align: center;
+                /* Center text */
+                margin: 5px 0;
+                /* Vertical margin for spacing */
+            }
+
+            .ul img {
+                width: 30px;
+                /* Adjust image size for smaller screens */
+            }
+        }
+
+
+        /* Footer Styling */
+        footer {
+            background-color: darkorange;
+
+            color: white;
+
+            width: 100%;
+            /* or any other appropriate value */
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        .footer-col {
+            flex: 1;
+            padding: 20px;
+            min-width: 250px;
+        }
+
+        .footer-col h3 {
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .footer-col ul {
+            list-style-type: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .footer-col ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: darkorange;
+        }
+
+        .social-links a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: darkorange;
+        }
+
+        .footer-bottom {
+            background-color: darkorange;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            color: white;
+        }
+
+        .footer-bottom p {
+            font-size: 14px;
+        }
+
+        @media(max-width:700px) {
+
+            .navigation {
+                width: 100%;
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-logo" href="index.html">
+                    <img src="best-time/LOGO.png" alt="" height="20px">
+                </a>
+                <!--home-->
+                <li class="home">
+                    <div class="navbar-item">
+                        <a href="index.html" style="list-style-type: none; color: orange; text-decoration: none;  ">
+                            <span class="fa fa-home"> </span></a>
+                </li>
+                <button class="navbar-toggler img-fluid" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"> </span>
+                </button>
+            </div>
+            <!--Experiences-->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" id="experiencesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Experiences</a>
+                        <ul class="dropdown-menu" aria-labelledby="experiencesDropdown">
+
+                            <li><a class="dropdown-item" href="#">Adventure</a></li>
+                            <li><a class="dropdown-item" href="#">Cultural</a></li>
+                            <li><a class="dropdown-item" href="#">Historical</a></li>
+                            <li><a class="dropdown-item" href="#">Nature</a></li>
+                            <li><a class="dropdown-item" href="#">Religious</a></li>
+                            <li><a class="dropdown-item" href="#">Luxury</a></li>
+                            <li><a class="dropdown-item" href="#">Budget</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- DESTINATIONS -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="monthsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Destinations</a>
+                        <div class="dropdown-menu p-3" aria-labelledby="monthsDropdown">
+                            <div class="grid-packages">
+                                <!-- Column 1, Row 1 -->
+                                <div>
+                                    <H6><b>Mountain Packages</b></H6>
+                                    <ul class="packageul" id="ul-packages-4">
+                                        <li><a href="#">Himalayas</a></li>
+                                        <li><a href="#">Rockies</a></li>
+                                        <li><a href="#">Andes</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Column 2, Row 1 -->
+                                <div>
+                                    <h6><b>Seasonal Packages</b></h6>
+                                    <ul class="packageul" id="ul-packages-2">
+                                        <li><a href="#">April</a></li>
+                                        <li><a href="#">May</a></li>
+                                        <li><a href="#">June</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Column 1, Row 2 -->
+                                <div>
+                                    <h6><b>Beach Packages</b></h6>
+                                    <ul class="packageul" id="ul-packages-3">
+                                        <li><a href="#">Maldives</a></li>
+                                        <li><a href="#">Hawaii</a></li>
+                                        <li><a href="#">Bora Bora</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Column 2, Row 2 -->
+                                <div>
+                                    <h6><b>Mountain Packages</b></h6>
+                                    <ul class="packageul" id="ul-packages-4">
+                                        <li><a href="#">Himalayas</a></li>
+                                        <li><a href="#">Rockies</a></li>
+                                        <li><a href="#">Andes</a></li>
+
+                                    </ul>
+                                </div>
+                                <!-- Column 1, Row 2 -->
+                                <div>
+                                    <h6><b>Beach Packages</b></h6>
+                                    <ul class="packageul" id="ul-packages-3">
+                                        <li><a href="#">Maldives</a></li>
+                                        <li><a href="#">Hawaii</a></li>
+                                        <li><a href="#">Bora Bora</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Column 2, Row 2 -->
+                                <div>
+                                    <h6><b>Mountain Packages</b></h6>
+                                    <ul class="packageul" id="ul-packages-4">
+                                        <li><a href="#">Himalayas</a></li>
+                                        <li><a href="#">Rockies</a></li>
+                                        <li><a href="#">Andes</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Column 1, Row 2 -->
+                                <div>
+                                    <h6><b>Beach Packages</b></h6>
+                                    <ul class="packageul" id="ul-packages-3">
+                                        <li><a href="#">Maldives</a></li>
+                                        <li><a href="#">Hawaii</a></li>
+                                        <li><a href="#">Bora Bora</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Column 2, Row 2 -->
+                                <div>
+                                    <h6><b>Mountain Packages</b></h6>
+                                    <ul class="packageul" id="ul-packages-4">
+                                        <li><a href="#">Himalayas</a></li>
+                                        <li><a href="#">Rockies</a></li>
+                                        <li><a href="#">Andes</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+ 
+                    <!-- best time to visit-->
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="monthsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Best time to visit</a>
+                        <div class="dropdown-menu p-3" aria-labelledby="monthsDropdown" style="min-width: 500px;">
+                            <!-- Increase dropdown width for better spacing -->
+                            <div class="grid-packages">
+                                <!-- Column 1, Row 1 -->
+                                <div>
+                                    <h6><b>Hills</b></h6>
+                                    <ul class="packageul" id="ul-packages-4">
+                                        <li><a href="best-uttrakhand.html">Uttrakhand</a></li>
+                                        <li><a href="best-himachal.html">Himachal Pradesh</a></li>
+                                        <li><a href="best-ladakh.html">Ladakh</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Column 2, Row 1 -->
+                                <div>
+                                    <h6><b>Sea</b></h6>
+                                    <ul class="packageul" id="ul-packages-2">
+                                        <li><a href="best-goa.html">Goa</a></li>
+                                        <li><a href="best-kerala.html">Kerala Backwaters</a></li>
+                                        <li><a href="best-andaman.html">Andaman</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Column 1, Row 2 -->
+                                <div>
+                                    <h6><b>Others</b></h6>
+                                    <ul class="packageul" id="ul-packages-3">
+                                        <li><a href="best-golden.html">Golden Triangle</a></li>
+                                        <li><a href="besttaj.html">Taj Mahal</a></li>
+                                        <li><a href="best-sikkim.html">Sikkim</a></li>
+                                        <li><a href="best-rajhasthan.html">Rajasthan</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <!-- packages section-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="monthsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Packages</a>
+                        <div class="dropdown-menu p-3" aria-labelledby="monthsDropdown">
+                            <div class="grid-packages">
+                                <!-- Column 1, Row 1 -->
+                                <div>
+                                    <div>
+                                        <h6><b>Mountain Packages</b></h6>
+                                        <ul class="packageul" id="ul-packages-4">
+                                            <li><a href="#">Himalayas</a></li>
+                                            <li><a href="#">Rockies</a></li>
+                                            <li><a href="#">Andes</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Column 2, Row 1 -->
+                                <div>
+                                    <h6><b>Seasonal Packages</b></h6>
+                                    <ul class="packageul" id="ul-packages-2">
+                                        <li><a href="#">April</a></li>
+                                        <li><a href="#">May</a></li>
+                                        <li><a href="#">June</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Column 1, Row 2 -->
+                                <div>
+                                    <h6><b>Beach Packages</b></h6>
+                                    <ul class="packageul" id="ul-packages-3">
+                                        <li><a href="#">Maldives</a></li>
+                                        <li><a href="#">Hawaii</a></li>
+                                        <li><a href="#">Bora Bora</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Column 2, Row 2 -->
+                                <div>
+                                    <h6><b>Mountain Packages</b></h6>
+                                    <ul class="packageul" id="ul-packages-4">
+                                        <li><a href="#">Himalayas</a></li>
+                                        <li><a href="#">Rockies</a></li>
+                                        <li><a href="#">Andes</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+
+                    <!-- International -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="gridDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">International</a>
+                        <ul class="dropdown-menu" aria-labelledby="gridDropdown">
+                            <div class="grid-dropdown">
+                                <a href="list.html">
+                                    <div class="grid-item"><img src="INDEX IMAGES/singapore.jpg" alt="Image 1">
+                                        Singapore
+                                    </div>
+                                </a>
+                                <a href="list.html">
+                                    <div class="grid-item"><img src="INDEX IMAGES/nepal.jpg" alt="Image 1"> Nepal
+                                    </div>
+                                </a>
+                                <a href="list.html">
+                                    <div class="grid-item"><img src="INDEX IMAGES/malyasia.jpg" alt="Image 1"> Malyasia
+                                    </div>
+                                </a>
+                                <a href="list.html">
+                                    <div class="grid-item"><img src="INDEX IMAGES/dubai.jpg" alt="Image 1"> Dubai
+                                    </div>
+                                </a>
+                                <a href="list.html">
+                                    <div class="grid-item"><img src="INDEX IMAGES/Indonesia.jpg" alt="Image 1">Indonesia
+                                    </div>
+                                </a>
+                                <a href="list.html">
+                                    <div class="grid-item"><img src="INDEX IMAGES/thailand.jpg" alt="Image 1"> Thailand
+                                    </div>
+                                </a>
+                                <a href="list.html">
+                                    <div class="grid-item"><img src="INDEX IMAGES/mauritius.jpg" alt="Image 1">
+                                        Mauritius
+                                    </div>
+                                </a>
+                                <a href="list.html">
+                                    <div class="grid-item"><img src="INDEX IMAGES/maldives.jpg" alt="Image 1"> Maldives
+                                    </div>
+                                </a>
+                                <a href="list.html">
+                                    <div class="grid-item"><img src="INDEX IMAGES/srilanka.jpg" alt="Image 1"> Sri Lanka
+                                    </div>
+                                </a>
+
+                            </div>
+                        </ul>
+                    </li>
+
+
+
+
+
+                    <!--  offers -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="offersDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Offers</a>
+                        <ul class="dropdown-menu" aria-labelledby="offersDropdown">
+
+                            <li><a class="dropdown-item" href="#">Jammu and Kashmir</a></li>
+                            <li><a class="dropdown-item" href="#">International</a></li>
+                            <li><a class="dropdown-item" href="#">Seasonal</a></li>
+                            <li><a class="dropdown-item" href="#">Last Minute</a></li>
+                            <li><a class="dropdown-item" href="#">Family Packages</a></li>
+                            <li><a class="dropdown-item" href="#">Group Discounts</a></li>
+                            <li><a class="dropdown-item" href="#">Honeymoon Packages</a></li>
+
+
+
+                            <!-- Add more offers as needed -->
+                        </ul>
+                    </li>
+
+
+                    </li>
+                    <!-- new section    -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="monthsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"><img src="new.gif" alt=""></a>
+                        <div class="dropdown-menu p-3" aria-labelledby="monthsDropdown">
+                            <div class="grid-packages">
+                                <!-- Column 1, Row 1 -->
+                                <div>
+                                    <H6><b>Mountain Packages</b></H6>
+                                    <ul class="packageul" id="ul-packages-4">
+                                        <li><a href="#">Himalayas</a></li>
+                                        <li><a href="#">Rockies</a></li>
+                                        <li><a href="#">Andes</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Column 2, Row 1 -->
+                                <div style="margin-left: 20px;">
+                                    <h6><b>Seasonal Packages</b></h6>
+                                    <ul class="packageul" id="ul-packages-2">
+                                        <li><a href="#">April</a></li>
+                                        <li><a href="#">May</a></li>
+                                        <li><a href="#">June</a></li>
+                                    </ul>
+                                </div>
+
+
+
+                            </div>
+                    </li>
+
+
+                    <!-- BY month section-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="monthsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">By Month</a>
+                        <ul class="dropdown-menu" aria-labelledby="monthsDropdown">
+                            <li><a class="dropdown-item" href="#">January</a></li>
+                            <li><a class="dropdown-item" href="#">February</a></li>
+                            <li><a class="dropdown-item" href="#">March</a></li>
+                            <li><a class="dropdown-item" href="#">April</a></li>
+                            <li><a class="dropdown-item" href="#">May</a></li>
+                            <li><a class="dropdown-item" href="#">June</a></li>
+                            <li><a class="dropdown-item" href="#">July</a></li>
+                            <li><a class="dropdown-item" href="#">August</a></li>
+                            <li><a class="dropdown-item" href="#">September</a></li>
+                            <li><a class="dropdown-item" href="#">October</a></li>
+                            <li><a class="dropdown-item" href="#">November</a></li>
+                            <li><a class="dropdown-item" href="#">December</a></li>
+                            <!-- Add more months as needed -->
+                        </ul>
+                    </li>
+
+
+                </ul>
+                <div class="button">
+                    <button type="button" class="btn btn-warning">
+                        <a href="enquiry.html" class="enquiry-link">ENQUIRY</a>
+                    </button>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!-- image  -->
+    <div class="image img-fluid" align="center" style="margin-top: 2%;">
+        <div style="background-image: url('best-time/taj2.jpg'); background-size: cover; height: 70vh; width: 100vw; background-color: black; display: flex; justify-content: center; align-items: center;"
+            align>
+
+            <div class="imgcontainer" style="width:400px;height: 400px; background-color: #00000090;">
+                <div class="fade-text">
+                    <h1>
+                        All The Packages
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="navigation" style="background-color: #0000002f;">
+        <ul class="navigationul" style="text-decoration: underline;">
+
+            <a href="index.html">
+                <li>Home ></li>
+            </a>
+            <a href="">
+                <li>Best time to visit ></li>
+            </a>
+            <a href="">
+                <li> Best time to visit Taj Mahal</li>
+            </a>
+
+        </ul>
+
+    </div>
+
+
+    <div class="readmore-container">
+        <div class="readmore-content">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac elementum elit. Morbi eu arcu sed
+                ex
+                condimentum euismod. Ut vehicula gravida dui vel tincidunt. Quisque ut ex risus. Nulla ac lectus nec
+                odio
+                dapibus consequat. Praesent dictum, purus a bibendum bibendum, libero justo cursus nisl, nec laoreet
+                risus
+                orci sit amet neque. Nullam ac risus vel felis sagittis vehicula. Vivamus eu urna odio. Curabitur vitae
+                felis ut velit condimentum tristique. Aenean congue lorem eu venenatis tristique.
+            </p>
+        </div>
+        <div class="readmore-fade-overlay"></div>
+        <button class="readmore-btn" onclick="toggleReadMore()">Read More</button>
+
+    </div>
+    <div class="button" style="display: flex;justify-content: center;">
+        <button type="button" class="btn btn-warning">
+            <a href="enquiry.html" class="enquiry-link">ENQUIRE NOW</a>
+        </button>
+    </div>
+
+
+
+
+    <script>
+        function toggleReadMore() {
+            const textContent = document.querySelector('.readmore-content');
+            const fadeOverlay = document.querySelector('.readmore-fade-overlay');
+            const readMoreBtn = document.querySelector('.readmore-btn');
+
+            if (textContent.style.maxHeight === 'none' || textContent.style.maxHeight === '') {
+                // Collapse text and show Read More
+                textContent.style.maxHeight = '1.6em';  // Adjusted for one line
+                fadeOverlay.style.display = 'block';
+                readMoreBtn.innerText = 'Read More';
+            } else {
+                // Expand text and hide Read More
+                textContent.style.maxHeight = 'none';  // Expand text to show all
+                fadeOverlay.style.display = 'none';
+                readMoreBtn.innerText = 'Read Less';
+            }
+        }
+    </script>
+    <hr width="100%">
+    <div class="heading" style="display: flex; justify-content: space-around;">
+        <h1 style="color:orange">Recommended tour packages</h1>
+    </div>
+    <hr width="100%">
+    <br>
+    <div class="ITINERARY">
+
+    </div>
+
+
+
+    <style>
+        /* Style for the flex container */
+        .image-row {
+            display: flex;
+            gap: 20px;
+            /* Add spacing between images */
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        /* Style for each image container */
+        .image-container {
+            position: relative;
+            width: 300px;
+            /* Set your desired image width */
+            height: 150px;
+            /* Set your desired image height */
+        }
+
+        /* Style for the image */
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Maintain aspect ratio */
+        }
+
+        /* Style for the overlay */
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 20%;
+            /* Adjust the overlay height */
+            background-color: rgba(0, 0, 0, 0.6);
+            /* Transparent black */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Style for the text within the overlay */
+        .overlay-text {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        /* Style for the anchor tag (optional) */
+        .image-link {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+
+    <div class="image-row">
+        <div class="image-container">
+            <a href="page1.html" class="image-link">
+                <img src="image1.jpg" alt="Image 1">
+                <div class="overlay">
+                    <p class="overlay-text">Explore More</p>
+                </div>
+            </a>
+        </div>
+        <div class="image-container">
+            <a href="page1.html" class="image-link">
+                <img src="image1.jpg" alt="Image 1">
+                <div class="overlay">
+                    <p class="overlay-text">Explore More</p>
+                </div>
+            </a>
+        </div>
+        <div class="image-container">
+            <a href="page1.html" class="image-link">
+                <img src="image1.jpg" alt="Image 1">
+                <div class="overlay">
+                    <p class="overlay-text">Explore More</p>
+                </div>
+            </a>
+        </div>
+        <div class="image-container">
+            <a href="page1.html" class="image-link">
+                <img src="image1.jpg" alt="Image 1">
+                <div class="overlay">
+                    <p class="overlay-text">Explore More</p>
+                </div>
+            </a>
+        </div>
+        <!-- Repeat similar blocks for other images -->
+
+    </div>
+
+    <div class="buttons"
+        style="display: flex;justify-content: center; align-items: center; margin-top: 20px; padding: 10px;">
+        <div class="button">
+            <button type="button" class="btn btn-warning" style="border-radius: 20px;">
+                <a href="enquiry.html" class="enquiry-link">ENQUIRE NOW</a>
+            </button>
+            <button type="button" class="btn btn-warning" style="border-radius: 20px;">
+                <a href="innerhtml/sikkim.html" class="enquiry-link">VIEW MORE</a>
+            </button>
+        </div>
+        &nbsp;
+
+
+    </div>
+
+
+
+
+    <!--upper footer section -->
+    <hr class="h" style="filter: blur(50%);">
+
+    <div class="ul img-fluid">
+        <ul>
+            <li><a href="">Terms and conditions</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="">Special offers <img src="new.gif" style="width: 40px;" alt=""></a></li>
+            <li><a href="">Site map</a></li>
+            <li><a href="">Client Testimonials</a></li>
+            <li><a href="">Good to know</a></li>
+            <li><a href="">Enquiry now</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Contact us</a></li>
+        </ul>
+    </div>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h3>UNIT 9 TRAVEL</h3>
+                    <p>Your gateway to incredible travel experiences.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Destinations</a></li>
+                        <li><a href="#">Tours</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul style="color: white;">
+                        <li>Email: unittravel9@gmail.com</li>
+                        <li>Phone: +919797803565</li>
+                        <li>Address: 123 Travel St, New Delhi, India</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/Unit9travel?t=XYNE6BAimiXunn-IuxoKuQ&s=08"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/unit9_travel?igsh=dGh3Z3R6NmVvNm4y"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        we accept
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 UNIT 9 TRAVEL. All Rights Reserved.</p>
+            </div>
+        </div>
+
+    </footer>
+    <!-- Include FontAwesome for Social Media Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+
+</html>
